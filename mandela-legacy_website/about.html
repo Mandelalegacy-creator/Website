@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Mandela Legacy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation (will add soon) -->
+
+  <header class="main-header">
+  <div class="container nav-container">
+    <img src="https://th.bing.com/th/id/R.6b7b73bd264dfdf006acfee94d00b1d1?rik=bTVx2XtMQTHlig&riu=http%3a%2f%2fmandelalegacy.com%2fwp-content%2fuploads%2f2023%2f08%2fSIte-offline-logo.png&ehk=NnGcqOFxrd6KXzsE%2fOD%2bKNPnpH2wu8oB0PmaTDOVUoo%3d&risl=&pid=ImgRaw&r=0" alt="Mandela Legacy Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="hero-overlay">
+    <div class="container">
+      <h1>About Mandela Legacy</h1>
+      <p>Empowering South Africa's youth through innovation, training, and opportunity.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="mission-vision-values">
+  <div class="container">
+    <h1>Our Mission, Vision & Values</h1>
+    <h2>Vision Statement</h2>
+    <p>
+      It is our vision to be South Africa's innovation catalyst, collaborating to translate imaginative programs into breakthrough solutions that secure a prosperous and vibrant future for our nation – working with all parts of the community.
+    </p>
+
+    <h2>Mission Statement</h2>
+    <p>
+      At Mandela Legacy Gateway to Africa, our mission is to empower South African youth through comprehensive training and development, equipping them with the skills and knowledge to excel in the Business Process Outsourcing (BPO) industry. We aim to provide top-tier BPO services to domestic and multinational organizations, with the added objective of driving innovation and excellence in emerging fields such as Generative AI and Data Engineering.
+    </p>
+
+    <h2>Our Values</h2>
+    <p>
+      At the heart of our values is a commitment to impactful sourcing. We are dedicated to creating employment opportunities for South African youth, fostering continuous training and education, and championing equity in the workplace.
+    </p>
+  </div>
+</section>
+
+<!-- Inspired by Nelson Mandela (Slideshow) -->
+<section class="mandela-legacy">
+  <div class="container">
+    <h2>Inspired by Nelson Mandela</h2>
+    <div class="mandela-slideshow">
+      <div class="mandela-quote active">
+        <p class="quote">"Education is the most powerful weapon which you can use to change the world."</p>
+      </div>
+      <div class="mandela-quote">
+        <p class="quote">"It always seems impossible until it's done."</p>
+      </div>
+      <div class="mandela-quote">
+        <p class="quote">"The greatest glory in living lies not in never falling, but in rising every time we fall."</p>
+      </div>
+      <div class="slideshow-controls">
+        <button class="slide-btn" id="prev-slide">&#8592;</button>
+        <button class="slide-btn" id="next-slide">&#8594;</button>
+      </div>
+    </div>
+    <p class="mandela-legacy-desc">
+      Our work is rooted in the enduring values of Nelson Mandela: dignity, justice, and opportunity for all. We are proud to uphold his legacy through our commitment to empowerment, equity, and education.
+    </p>
+  </div>
+</section>
+
+<script>
+  // Simple slideshow for Mandela quotes
+  const quotes = document.querySelectorAll('.mandela-quote');
+  let current = 0;
+
+  function showQuote(index) {
+    quotes.forEach((q, i) => {
+      q.classList.toggle('active', i === index);
+    });
+  }
+
+  document.getElementById('prev-slide').onclick = function() {
+    current = (current - 1 + quotes.length) % quotes.length;
+    showQuote(current);
+  };
+  document.getElementById('next-slide').onclick = function() {
+    current = (current + 1) % quotes.length;
+    showQuote(current);
+  };
+
+  // Optional: auto-slide every 7 seconds
+  setInterval(() => {
+    current = (current + 1) % quotes.length;
+    showQuote(current);
+  }, 7000);
+</script>
+
+  <section class="three-pillars">
+  <h2>Our Three Pillars</h2>
+  <div class="pillar-grid">
+    <div class="pillar">
+      <div class="pillar-icon">🌱</div>
+      <h3>Empowerment</h3>
+      <p>We provide resources and opportunities for individuals and communities to thrive and reach their full potential.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🤝</div>
+      <h3>Collaboration</h3>
+      <p>We foster partnerships and teamwork to drive sustainable impact and shared success.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">💡</div>
+      <h3>Innovation</h3>
+      <p>We champion creative solutions and forward-thinking approaches to address challenges and create lasting change.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Meet the Team Section -->
+<section class="team-section">
+  <div class="container">
+    <h2>Meet Our Executive Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Zondwa Mandela" />
+        <h3>Zondwa Mandela</h3>
+        <p class="title">CEO and Chairman</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Luyanda Dlamini" />
+        <h3>Luyanda Dlamini</h3>
+        <p class="title">Chief Operating Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Jamar Evans" />
+        <h3>Jamar Evans</h3>
+        <p class="title">Chief Financial Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Mark Smith" />
+        <h3>Mark Smith</h3>
+        <p class="title">Head of Department</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Lindo Mandela" />
+        <h3>Lindo Mandela</h3>
+        <p class="title">Chief Stakeholder Relationship Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Lungelo Ndaba" />
+        <h3>Lungelo Ndaba</h3>
+        <p class="title">Head of Marketing and Media</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+
+   <div class="footer-logo">
+  <img src="http://mandelalegacy.com/wp-content/uploads/2021/10/Site-logo-white.png" alt="Mandela Legacy Logo" />
+</div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Phone: +27 015 001 0786</p>
+      
+    <p>Email: <a href="mailto:info@mandelalegacy.com">info@mandelalegacy.com</a></p>
+
+      <p>66 Albert Road, Woodstock, A401, Level 4, Woodstock Exchange, Cape Town, Western Cape, South Africa, 8001</p>
+    </div>
+
+    <div class="footer-nav">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <a href="https://www.linkedin.com/company/mandela-legacy/" target="_blank" aria-label="LinkedIn" rel="noopener">
+        <img src="https://img.icons8.com/ios-filled/24/180636/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://x.com/mandelalegacy?lang=en" target="_blank" aria-label="Twitter" rel="noopener">
+        <img src="https://img.icons8.com/ios-filled/24/180636/twitter.png" alt="Twitter" />
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Mandela Legacy. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
